@@ -7,10 +7,12 @@
 import os
 import sys
 import time
-import random
-import mechanize
 from time import sleep
-from avg import average
+import Games.games
+import Games.tebak_angka
+from Tools import banner
+from Tools import avg
+import Games
 
 wd = "\033[90;1m" # dark
 GL = "\033[96;1m" # Blue aqua
@@ -33,13 +35,21 @@ def runntxt(s):
                 sys.stdout.flush()
                 time.sleep(8. / 2100)
 
+def pilih_game():
+        chose_games = int(input(f"1. Dungeon Games\n2. Tebak Angka\n\n Silahkan Pilih: "))
+        if chose_games == 1:
+            Games.games.start_game()
+        elif chose_games == 2:
+            Games.tebak_angka.tebak_angka()
+        else:
+            print(f"\nPilihan Tidak Tepat. {pilihan}")
 
 def pilihan():
-    pilih = int(input(f"\n{CC}Choose your tools \n\n{W}1.Menghitung Rata²\n{W}2.Algorithm\n\n{Y}Masukkan pilihanmu :{GG}  "))
+    pilih = int(input(f"\n{CC}Selamat Datang di program python sederhana\n Silahkan pilih Program dibawah  \n\n{W}1.Games\n{W}2.Tools\n\n{Y}Masukkan pilihanmu :{GG}  "))
     if pilih == 1:
-    	average()
+        pilih_game()
     if pilih == 2:
-    	print(f"{Y}ini Algorithm")
+    	avg.average
 
 def stop():
 	runntxt(RR+'Program akan dihentikan')

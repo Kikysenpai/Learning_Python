@@ -1,9 +1,10 @@
 #untuk banner
-for time import sleep
+from time import sleep
 import os
+import sys
 import time
 
- = "\033[90;1m" # dark
+O = "\033[90;1m" # dark
 GL = "\033[96;1m" # Blue aqua
 BB = "\033[34;1m" # Blue light
 YY = "\033[33;1m" # Yellow light
