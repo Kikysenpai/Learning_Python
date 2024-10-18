@@ -10,6 +10,7 @@ import time
 from time import sleep
 import Games.games
 import Games.tebak_angka
+import Games.tebak_isi_kotak
 from Tools import banner
 from Tools import avg
 import Games
@@ -36,11 +37,13 @@ def runntxt(s):
                 time.sleep(8. / 2100)
 
 def pilih_game():
-        chose_games = int(input(f"1. Dungeon Games\n2. Tebak Angka\n\n Silahkan Pilih: "))
+        chose_games = int(input(f"1. Dungeon Games\n2. Tebak Angka\n3. Tebak isi kotak\n\n Silahkan Pilih: "))
         if chose_games == 1:
             Games.games.start_game()
         elif chose_games == 2:
             Games.tebak_angka.tebak_angka()
+        elif chose_games == 3:
+            Games.tebak_isi_kotak.tebak()
         else:
             print(f"\nPilihan Tidak Tepat. {pilihan}")
 
