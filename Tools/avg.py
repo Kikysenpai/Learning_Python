@@ -30,7 +30,7 @@ def average():
 	avg = ((tiket_masuk * jumlah_peserta) + (konsumsi * jumlah_peserta) + biaya_travel) / jumlah_peserta
 	avg = int(avg)
 	print(f'''\n{CC}Menghitung harga rata² yang harus dibayar''')
-	print(f"\n{W}[ ({GG}{tiket_masuk}{RR} × {YY}{jumlah_peserta}){RR} + ({GL}{konsumsi}{RR} × {YY}{jumlah_peserta}){RR} + {BB}{biaya_travel} ){CC} ÷{YY} {jumlah_peserta} {W}]")
+	print(f"\n{W}[ ({GG}{tiket_masuk}{RR} {W}× {YY}{jumlah_peserta}{W}){RR}{W} + ({GL}{konsumsi}{RR}{W} × {YY}{jumlah_peserta}{W}){RR}{W} + {BB}{biaya_travel} {W}) ÷{YY} {jumlah_peserta} {W}]")
 	sleep(1)
 	print(f"\nSetiap peserta harus membayar: {GG}{avg}{W} Ribu Rupiah")
 
