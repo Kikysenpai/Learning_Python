@@ -52,10 +52,10 @@ def pilihan():
     if pilih == 1:
         pilih_game()
     if pilih == 2:
-    	avg.average
+    	avg.average()
 
 def stop():
-	runntxt(RR+'Program akan dihentikan')
+	runntxt(RR+'\nProgram akan dihentikan')
 	sleep(1)
 	print(f"{G}3...")
 	sleep(1)

@@ -2,7 +2,6 @@
 import sys
 import os
 from time import sleep
-from color import colors
 
 wd = "\033[90;1m" # dark
 GL = "\033[96;1m" # Blue aqua
@@ -21,19 +20,19 @@ C = "\033[36;1m"  # Cyan
 
 def average():
 	os.system('clear')
-	print(f'''{G}╔═══════════════════════════════════════════════╗\n║  {W} Mencari nilai harga rata-rata untuk acara   {G}║\n╚═══════════════════════════════════════════════╝''')
+	print(f'''{G}╔════════════════════════════════════════════════════╗\n║  {W} Mencari nilai pembayaran rata-rata untuk acara   {G}║\n╚════════════════════════════════════════════════════╝''')
 	uang = "Ribu"
-	jumlah_peserta = int(input(f'{W}\nberapa jumlah peserta:{Y} '))
-	tiket_masuk = int(input(f'{W}berapa harga tiket masuk per orang:{GG} '))
-	konsumsi = int(input(f'{W}berapa biaya konsumsi per orang:{GL} '))
-	biaya_travel = int(input(f'{W}berapa biaya bus travel:{BB} '))
+	jumlah_peserta = int(input(f'\n{YY}× {W}berapa jumlah peserta:{Y} '))
+	tiket_masuk = int(input(f'{GG}$ {W}berapa harga tiket masuk per orang:{GG} '))
+	konsumsi = int(input(f'{CC}$ {W}berapa biaya konsumsi per orang:{GL} '))
+	biaya_travel = int(input(f'{BB}$ {W}berapa biaya bus travel:{BB} '))
 
 	avg = ((tiket_masuk * jumlah_peserta) + (konsumsi * jumlah_peserta) + biaya_travel) / jumlah_peserta
 	avg = int(avg)
 	print(f'''\n{CC}Menghitung harga rata² yang harus dibayar''')
-	print(f"\n[ ({GG}{tiket_masuk}{RR} × {YY}{jumlah_peserta}){RR} + ({GL}{konsumsi}{RR} × {YY}{jumlah_peserta}){RR} + {BB}{biaya_travel} ){CC} ÷{YY} {jumlah_peserta} ]")
+	print(f"\n{W}[ ({GG}{tiket_masuk}{RR} × {YY}{jumlah_peserta}){RR} + ({GL}{konsumsi}{RR} × {YY}{jumlah_peserta}){RR} + {BB}{biaya_travel} ){CC} ÷{YY} {jumlah_peserta} {W}]")
 	sleep(1)
-	print(f"\nSetiap peserta harus membayar: {avg} Ribu Rupiah")
+	print(f"\nSetiap peserta harus membayar: {GG}{avg}{W} Ribu Rupiah")
 
 if __name__ == "__main__":
 	average()
